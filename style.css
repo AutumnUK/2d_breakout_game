@@ -1,0 +1,8 @@
+canvas {
+    border-width: 2px;
+    border-style:solid;
+    background: rgb(51, 190, 237);
+}
+buttons {
+    display: block;
+}

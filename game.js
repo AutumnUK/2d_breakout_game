@@ -45,7 +45,6 @@ function drawBricks() {
     }
 }
 
-
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
@@ -60,14 +59,23 @@ function drawBall() {
     ctx.arc(x,y,ballRadius,0,Math.PI *2);
     ctx.fillStyle = "green";
     ctx.fill();
-    ctx.closePath();drawBricks
+    ctx.closePath();
 }
+
+function collisionDetection() {
+    for (let c = 0; c < brickColumnCount; c++) {
+        for (let r = 0; r < brickRowCount; r++) {
+            const b = bricks[c][r];
+        }
+    }
+}
+
 
 function draw() {
     ctx.clearRect(0 , 0 , canvas.width, canvas.height);
     
     drawBall();
-    
+    drawBricks();
     drawPaddle();
     if (x + dx > canvas.width - ballRadius || x + dx < ballRadius){ dx = -dx; }
     if (y + dy < ballRadius) {
@@ -109,7 +117,7 @@ function keyUpHandler(e) {
 function startGame() {
     document.addEventListener("keydown", keyDownHandler);
     document.addEventListener("keyup", keyUpHandler);
-
+    
     setInterval(draw,16);
 }
 

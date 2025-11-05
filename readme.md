@@ -5,3 +5,5 @@ I don't plan on extending it further, although I probably should.
 
 I will definitely look into using the html canvas for making games though! Keep an eye on this space as I work on more projects.
 
+If you want to play it, you can check it out [here](https://autumnuk.github.io/2d_breakout_game/).
+(Arrow keys to move the paddle.
